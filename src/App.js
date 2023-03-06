@@ -103,15 +103,15 @@ function App() {
 
           {isShown && (
             <div className="center">
-            <p className="under">Underweight: less than 18.5</p>
-            <p className="normal">Normal weight: 18.5 - 24.9</p>
-            <p className="over">Overweight: 25 - 30</p>
-            <p className="obes">Obesity: more than 30</p>
+              <p className="under">Underweight: less than 18.5</p>
+              <p className="normal">Normal weight: 18.5 - 24.9</p>
+              <p className="over">Overweight: 25 - 30</p>
+              <p className="obes">Obesity: more than 30</p>
           </div>
           )}
           
           <div>
-            <p>Copyright 2023 • All Rights Reserved by Bernadette Chrestella</p>
+            <p className="copyright">Copyright 2023 • All Rights Reserved by Bernadette Chrestella</p>
           </div>
         </div>
       </div>
