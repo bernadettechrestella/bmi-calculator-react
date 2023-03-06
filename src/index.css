@@ -1,7 +1,7 @@
 
 * {
   box-sizing: border-box;
-  margin: 0;
+  margin: auto;
   padding: 0;
 }
 
@@ -10,7 +10,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 100%;
+  width: 95%;
   height: 100vh;
 }
 
@@ -125,6 +125,10 @@ h3 {
 
 .img-container img {
   height: 200px;
+}
+
+.copyright {
+  text-align: center;
 }
 
 
