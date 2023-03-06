@@ -14,19 +14,19 @@ function App() {
       setIsShown2(current => !current);
     };
 
-    let imgSrc;
+    // let imgSrc;
 
-    if (bmi < 1) {
-      imgSrc = null
-    } else {
-      if(bmi < 18.5) {
-        imgSrc = require('../src/assets/underweight.png')
-      } else if (bmi >= 18.5 && bmi < 25) {
-        imgSrc = require('../src/assets/healthy.png')
-      } else if (bmi > 25 && bmi < 30){
-        imgSrc = require('../src/assets/overweight.png')
-      }
-    }
+    // if (bmi < 1) {
+    //   imgSrc = null
+    // } else {
+    //   if(bmi < 18.5) {
+    //     imgSrc = require('../src/assets/underweight.png')
+    //   } else if (bmi >= 18.5 && bmi < 25) {
+    //     imgSrc = require('../src/assets/healthy.png')
+    //   } else if (bmi > 25 && bmi < 30){
+    //     imgSrc = require('../src/assets/overweight.png')
+    //   }
+    // }
 
     let calcBmi = (event) => {
       event.preventDefault()
@@ -42,12 +42,16 @@ function App() {
 
         if (bmi < 18.5) {
           setMessage('You are Underweight')
+          setIsShown2(false)
         } else if (bmi >= 18.5 && bmi < 25) {
           setMessage('You are Normal weight')
+          setIsShown2(false)
         } else if (bmi >= 25 && bmi < 30){
           setMessage('You are Overweight')
+          setIsShown2(false)
         } else if (bmi > 30) {
           setMessage('You are Obesity')
+          setIsShown2(false)
         } else if (isNaN(bmi)) {
           setIsShown(false)
         }
@@ -91,11 +95,11 @@ function App() {
           </div>
           )}
           
-          {isShown && (
+          {/* {isShown && (
           <div className='img-container'>
             <img src={imgSrc} alt=''></img>
           </div>
-          )}
+          )} */}
 
           {isShown && (
             <div className="center">
@@ -106,6 +110,9 @@ function App() {
           </div>
           )}
           
+          <div>
+            <p>Copyright 2023 • All Rights Reserved by Bernadette Chrestella</p>
+          </div>
         </div>
       </div>
     );
